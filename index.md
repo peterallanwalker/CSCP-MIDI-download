@@ -4,7 +4,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](YOUR_EMAIL_CODE)
 
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](YOUR_EMAIL_CODE)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)]https://www.paypal.com/donate?hosted_button_id=ZD268QRGEM9ZG
 
 
 
