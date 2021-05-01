@@ -5,7 +5,8 @@ body {
 }
 
 ul {
-    padding: 1em;
+    list-style:none;
+    padding: 10em;
 }
 
 nav ul, footer ul {
