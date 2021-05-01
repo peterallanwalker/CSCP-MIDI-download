@@ -2,49 +2,84 @@
 layout: default
 title: peterallanwalker CSCP-MIDI
 ---
+<h1>CSCP-MIDI</h1>
 
-# CSCP-MIDI
+<p>Provides connectivity and two-way comms between devices supporting the CSCP protocol and devices/software supporting the MIDI protocol</p>
 
-Provides connectivity and two-way comms between devices supporting the CSCP protocol and devices/software supporting the MIDI protocol
-* Provides remote control over Calrec Audio mixers from a multitude of low-cost physical MIDI controllers
+<ul>
+   <li>Provides remote control over Calrec Audio mixers from a multitude of low-cost physical MIDI controllers</li>
+   <li>Allows Calrec Audio mixers to control DAW software applications</li> 
+</ul>
 
-* Allows Calrec Audio mixers to control DAW software applications
+<p>This application has been developed and tested using</p>:
 
-This application has been developed and tested using:
-* [Korg NanoKontrol2](https://www.korg.com/uk/products/computergear/nanokontrol2/) - A physical MIDI controller. 
+<ul>
+   <li><a href="https://www.korg.com/uk/products/computergear/nanokontrol2/">Korg NanoKontrol2</a></li> - A physical MIDI controller.</li>
+   <li><a href="https://www.reaper.fm/">Reaper</a> - DAW software.</li>
+   <li><a href="https://calrec.com/">Calrec Audio Brio</a> - Live/Pro/Broadcast Audio mixer (supporting the CSCP protocol).</li>
+</ul>
 
-* [Reaper](https://www.reaper.fm/) - DAW software 
+<h2>Usage</h2>
 
-* [Calrec Audio Brio](https://calrec.com/) - Live/Pro/Broadcast Audio mixer (supporting the CSCP protocol). 
+<p>The following instructions relate to Calrec Brio & Summa mixers. For other Calrec mixer types, 
+   please refer to their installation manual for configuring CSCP.</p>
+
+<ul>
+   <li>
+      Connect one of the LAN ports on your Calrec Audio mixer to your PC (or to the same network your PC is on).
+   </li>
+   <li>
+       Go to System-Settings>LAN config and set the mixer's IP address to one that is reachable from your PC 
+       (and set a static IP address on your PC if necessary).</li>
+   <li>
+       Go to System-Settings>Control-Protocols, check/set the TCP Port the mixer is using for CSCP and ensure CSCP is set to
+       enabled. 
+   </li>
+   <li>
+       If using a physical controller, its midi port will automatically be available to select from the CSCP-MIDI application
+       if the controller is connected when CSCP-MIDI starts up.
+       
+      <p>CSCP-MIDI has been tested with the KorgNanoKontrol2</p>
+      
+      <ul>
+         <li>
+            To use in its' default "CC" mode, selectable on the controller by holding its SET MARKER & CYCLE buttons when connecting it to your PC.
+         </li>
+         <li>
+            To use in "Sonar" mode, hold the SET MARKER & RECORD buttons when connecting.
+         </li>
+         <li>
+            To request support for other MIDI modes, contact peter.allan.walker@gmail.com 
+         </li>
+      </ul>    
+   </li>
+         If using DAW software running on the same PC as this application on Windows, then 3rd party software is required to provide virtual midi ports (to allow midi comms between applications running in Windows).
+         Download [loopmidi](https://www.tobias-erichsen.de/software/loopmidi.html) by Tobias Erichsen. 
+         Open loopmidi and click the '+' button to add a MIDI port that will be accessible to your DAW and to CSCP-MIDI.   
+   <ul>
+         <li>
+            
+            
+            CSCP-MIDI has been tested with the Reaper DAW:    
+         </li>
+         
+         <li></li>
+         <li></li>
+         <li></li>
+      </ul>   
+   
+   <li>
+   
+   </li>
+   
+</ul>
 
 
-### Usage
-The following instructions relate to Calrec Brio & Summa mixers. For other Calrec mixer types, 
-please refer to their installation manual for configuring CSCP.
+* 
+    * 
 
-* Connect one of the LAN ports on your Calrec Audio mixer to your PC (or to the same network your PC is on).
-
-* Go to System-Settings>LAN config and set the mixer's IP address to one that is reachable from your PC 
-(and set a static IP address on your PC if necessary).
-
-* Go to System-Settings>Control-Protocols, check/set the TCP Port the mixer is using for CSCP and ensure CSCP is set to
-enabled. 
-
-* If using a physical controller, its midi port will automatically be available to select from the CSCP-MIDI application
-if the controller is connected when CSCP-MIDI starts up.
-    * CSCP-MIDI has been tested with the KorgNanoKontrol2
-        * To use in its' default "CC" mode, selectable on the 
-            controller by holding its SET MARKER & CYCLE buttons when connecting it to your PC.
-        * To use in "Sonar" mode, hold the SET MARKER & RECORD buttons when connecting.
-        * To request support for other MIDI modes, contact peter.allan.walker@gmail.com
-
-
-* If using DAW software running on the same PC as this application on Windows, then 3rd party software is required to provide virtual midi ports (to allow midi comms between applications running in Windows)
-    * Download [loopmidi](https://www.tobias-erichsen.de/software/loopmidi.html) by Tobias Erichsen. Open loopmidi and
-    click the '+' button to add a MIDI port that will be accessible to your DAW and to CSCP-MIDI.
-
-    * Configure your DAW for use with a MIDI controller, selecting the MIDI port/s created by loopmidi.
-        * CSCP-MIDI has been tested with the Reaper DAW:
+    * 
+        
             * Reaper>Options>Preferences>Control-Surfaces, select "Add", choose "Makie Control Universal" and select the 
             midi ports created by loopmidi. Note, It is best to configure two MIDI ports in loop midi, one for input
             and one for output to avoid feedback loops. Ensure you select the correct ports here and in CSCP-MIDI when it
