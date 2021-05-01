@@ -9,6 +9,10 @@ ul {
     padding: 2em;
 }
 
+li {
+    padding: 2em;
+}
+
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
